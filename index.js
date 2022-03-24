@@ -161,3 +161,32 @@ document.addEventListener("DOMContentLoaded", () => {
         themeIcons.classList.add("toggle")
     }   
 })
+
+
+// добавляем валидацию на поле формы чтобы при пустых значениях в полях - поля подсвечивались красным
+const form = document.querySelector('form')
+const firstInput = document.querySelector('.first')
+const secondInput = document.querySelector('.last')
+const listInputs = document.querySelectorAll('input')
+
+firstInput.addEventListener('input', function(event) {
+    if (!event.target.value) {
+        event.target.classList.add('error')
+    } else {
+        event.target.classList.remove('error')
+    }
+})
+
+form.addEventListener('submit', validate)
+
+function validate(event) {
+    event.preventDefault()
+
+    listInputs.forEach(element => {
+        if(!element.value) {
+            element.classList.add('error')
+        } else {
+            element.classList.remove('error')
+        }
+    })
+}
