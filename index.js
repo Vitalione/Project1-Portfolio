@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-// добавляем валидацию на поле формы чтобы при пустых значениях в полях - поля подсвечивались красным
+// добавляем валидацию на поле формы чтобы при пустых значениях в полях - поля подсвечивались красным цветом
 const form = document.querySelector('form')
 const firstInput = document.querySelector('.first')
 const secondInput = document.querySelector('.last')
